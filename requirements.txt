@@ -1,0 +1,10 @@
+adafruit-circuitpython-dht
+adafruit-circuitpython-scd30
+adafruit-circuitpython-charlcd
+adafruit-circuitpython-ahtx0
+adafruit-blinka
+mysql-connector-python
+paho-mqtt
+vcgencmd
+python-dotenv
+requests
