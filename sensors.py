@@ -20,6 +20,29 @@ else:
     display = None
 
 
+def pull_values(sensor, i):
+    try:
+        if sensor.data_available:
+            temperature = float(format(sensor.temperature, ".2f"))
+            try:
+                humidity = float(format(sensor.humidity, ".2f"))
+            except:
+                humidity = float(format(sensor.relative_humidity, ".2f"))
+            try:
+                ppm = float(format(sensor.CO2, ".2f"))
+            except:
+                ppm = 0
+            push_values(temperature, humidity, ppm)
+            Healthchecks()
+            i = do_sleep(0, temperature, humidity, ppm)
+    except Exception as e:
+        logger.critical("Error encountered while checking values:\n{}".format(e))
+        Healthchecks('fail')
+        i = do_sleep(i)
+
+    return i
+
+
 def push_values(temp=18.0, humid=65.0, ppm=0.0):
     MQTT(temp, humid, ppm)
     EnvironmentDB().insert(temp, humid, ppm).close()
@@ -56,16 +79,8 @@ class TemperatureDHT:
         while True:
             Healthchecks('start')
             sensor = adafruit_dht.DHT22(board.D4)
-            try:
-                temperature = float(format(sensor.temperature, ".2f"))
-                humidity = float(format(sensor.humidity, ".2f"))
-                push_values(temperature, humidity)
-                Healthchecks()
-                i = do_sleep(0, temperature, humidity)
-            except Exception as e:
-                logger.critical("Error encountered while checking values:\n{}".format(e))
-                Healthchecks('fail')
-                i = do_sleep(i)
+            sensor.__setattr__('data_available', True)
+            i = pull_values(sensor, i)
             sensor.exit()
 
 
@@ -80,18 +95,7 @@ class TemperatureSCD:
 
         while True:
             Healthchecks('start')
-            try:
-                if sensor.data_available:
-                    temperature = float(format(sensor.temperature, ".2f"))
-                    humidity = float(format(sensor.relative_humidity, ".2f"))
-                    ppm = float(format(sensor.CO2, ".2f"))
-                    push_values(temperature, humidity, ppm)
-                    Healthchecks()
-                    i = do_sleep(0, temperature, humidity)
-            except Exception as e:
-                logger.critical("Error encountered while checking values:\n{}".format(e))
-                Healthchecks('fail')
-                i = do_sleep(i)
+            i = pull_values(sensor, i)
 
 
 class TemperatureAHT:
@@ -100,17 +104,9 @@ class TemperatureAHT:
         import adafruit_ahtx0
 
         sensor = adafruit_ahtx0.AHTx0(board.I2C())
+        sensor.__setattr__('data_available', True)
         i = 1
 
         while True:
             Healthchecks('start')
-            try:
-                temperature = float(format(sensor.temperature, ".2f"))
-                humidity = float(format(sensor.relative_humidity, ".2f"))
-                push_values(temperature, humidity)
-                Healthchecks()
-                i = do_sleep(0, temperature, humidity)
-            except Exception as e:
-                logger.critical("Error encountered while checking values:\n{}".format(e))
-                Healthchecks('fail')
-                i = do_sleep(i)
+            i = pull_values(sensor, i)

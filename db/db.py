@@ -11,7 +11,7 @@ logger = logging.getLogger("Status logger")
 
 class EnvironmentDB:
     has_ppm = False
-    query = "INSERT INTO {} (temp, humidity, ppm) VALUES ({}, {}, {})"
+    insert_query = "INSERT INTO {} (temp, humidity, ppm) VALUES (%s, %s, %s)"
     create = "CREATE TABLE IF NOT EXISTS {} " \
              "(" \
              "id int NOT NULL AUTO_INCREMENT PRIMARY KEY, " \
@@ -40,14 +40,9 @@ class EnvironmentDB:
 
     def insert(self, temp=100.0, humidity=65.0, ppm=0.0):
         if temp < 50:
-            self.connection.cursor().execute(
-                self.query.format(
-                    os.uname().nodename,
-                    temp,
-                    humidity,
-                    ppm
-                )
-            )
+            query = self.insert_query.format(os.uname().nodename)
+            cursor = self.connection.cursor(prepared=True)
+            cursor.execute(query, (temp, humidity, ppm))
         return self
 
     def close(self):

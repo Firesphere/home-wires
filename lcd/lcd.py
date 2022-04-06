@@ -57,16 +57,15 @@ class LCDDisplay:
             time.sleep(3)
         self.lcd.clear()
         self.lcd.message = messages['vcgmsg'].format(vcgencmd.Vcgencmd().measure_temp())
-        time.sleep(2)
-        tmp = 3
-        while tmp > 1:
-            time.sleep(1)
-            self.lcd.clear()
+        time.sleep(3)
+        tmp = time.time() + 5
+        self.lcd.clear()
+        self.lcd.message = datetime.now().strftime("%B %d, %Y")
+        while tmp > time.time():
             self.lcd.message = "{}\n{}".format(
                 datetime.now().strftime("%B %d, %Y"),
-                datetime.now().strftime("%H:%M:%S")
+                datetime.now().strftime("%T")
             )
-            tmp = tmp - 1
 
     def countdown(self, i):
         while i >= 0:
