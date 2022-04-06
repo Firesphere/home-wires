@@ -4,6 +4,8 @@ import time
 
 import board
 import dotenv
+import requests
+import HTTPBearerAuth.requests as auth
 
 from db.db import EnvironmentDB
 from healthchecks.healthchecks import Healthchecks
@@ -73,28 +75,38 @@ class TemperatureDHT:
 
     def __init__(self):
         import adafruit_dht
+        sensor = adafruit_dht.DHT22(board.D4)
+        sensor.__setattr__('data_available', True)
 
         i = 1
 
         while True:
             Healthchecks('start')
-            sensor = adafruit_dht.DHT22(board.D4)
-            sensor.__setattr__('data_available', True)
             i = pull_values(sensor, i)
-            sensor.exit()
 
 
 class TemperatureSCD:
+    # Location data for pressure
+    openweathermap = "states/sensor.openweathermap_pressure"
 
     def __init__(self):
         import adafruit_scd30
 
         sensor = adafruit_scd30.SCD30(board.I2C())
-
+        sensor.altitude = 255
+        url = '{}{}'.format(os.getenv('HASSURL'), self.openweathermap)
+        creds = auth.HTTPBearerAuth(os.getenv('HASS'))
         i = 1
 
         while True:
             Healthchecks('start')
+            try:
+                weather = requests.get(url, auth=creds)
+                result = weather.json()
+                sensor.ambient_pressure = round(int(result['state']))
+            except:
+                # no-op
+                logger.info('Could not retrieve weather data from HASS')
             i = pull_values(sensor, i)
 
 
