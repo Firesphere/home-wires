@@ -5,8 +5,8 @@ import time
 import board
 import dotenv
 import requests
-import HTTPBearerAuth.requests as auth
 
+import HTTPBearerAuth.requests as auth
 from db.db import EnvironmentDB
 from healthchecks.healthchecks import Healthchecks
 from lcd.lcd import LCDDisplay
@@ -15,6 +15,9 @@ from mqtt.mqtt import MQTT
 logger = logging.getLogger("Status logger")
 env_path = os.path.join(os.getcwd(), '.env')
 dotenv.load_dotenv(dotenv_path=env_path)
+openweathermap = "states/sensor.openweathermap_pressure"
+url = '{}{}'.format(os.getenv('HASSURL'), openweathermap)
+creds = auth.HTTPBearerAuth(os.getenv('HASS'))
 
 if os.getenv('HAS_LCD') == 'True':
     display = LCDDisplay()
@@ -22,27 +25,35 @@ else:
     display = None
 
 
+def set_weather(sensor):
+    try:
+        weather = requests.get(url, auth=creds)
+        result = weather.json()
+        sensor.ambient_pressure = round(int(result['state']))
+    except:
+        # no-op
+        logger.info('Could not retrieve weather data from HASS')
+
+
 def pull_values(sensor, i):
     try:
         if sensor.data_available:
             temperature = float(format(sensor.temperature, ".2f"))
-            try:
+            if hasattr(sensor, 'humidity'):
                 humidity = float(format(sensor.humidity, ".2f"))
-            except:
+            else:
                 humidity = float(format(sensor.relative_humidity, ".2f"))
-            try:
+            if hasattr(sensor, 'CO2'):
                 ppm = float(format(sensor.CO2, ".2f"))
-            except:
+            else:
                 ppm = 0
             push_values(temperature, humidity, ppm)
             Healthchecks()
             i = do_sleep(0, temperature, humidity, ppm)
     except Exception as e:
-        logger.critical("Error encountered while checking values:\n{}".format(e))
+        logger.critical("Error encountered while checking values:\n{}".format(e), exc_info=True)
         Healthchecks('fail')
-        i = do_sleep(i)
-
-    return i
+        return do_sleep(i)
 
 
 def push_values(temp=18.0, humid=65.0, ppm=0.0):
@@ -75,38 +86,30 @@ class TemperatureDHT:
 
     def __init__(self):
         import adafruit_dht
-        sensor = adafruit_dht.DHT22(board.D4)
-        sensor.__setattr__('data_available', True)
 
         i = 1
 
         while True:
             Healthchecks('start')
+            sensor = adafruit_dht.DHT22(board.D4)
+            sensor.__setattr__('data_available', True)
             i = pull_values(sensor, i)
+            sensor.exit()
 
 
 class TemperatureSCD:
     # Location data for pressure
-    openweathermap = "states/sensor.openweathermap_pressure"
 
     def __init__(self):
         import adafruit_scd30
 
         sensor = adafruit_scd30.SCD30(board.I2C())
         sensor.altitude = 255
-        url = '{}{}'.format(os.getenv('HASSURL'), self.openweathermap)
-        creds = auth.HTTPBearerAuth(os.getenv('HASS'))
         i = 1
 
         while True:
             Healthchecks('start')
-            try:
-                weather = requests.get(url, auth=creds)
-                result = weather.json()
-                sensor.ambient_pressure = round(int(result['state']))
-            except:
-                # no-op
-                logger.info('Could not retrieve weather data from HASS')
+            set_weather(sensor)
             i = pull_values(sensor, i)
 
 

@@ -30,7 +30,7 @@ class EnvironmentDB:
                 database=os.getenv('MYSQL_DATA')
             )
         except Exception as e:
-            logger.critical("Could not set up a database connection!\n{}".format(e))
+            logger.critical("Could not set up a database connection!\n{}".format(e), exc_info=True)
 
     def check_table(self):
         self.connection.cursor().execute(

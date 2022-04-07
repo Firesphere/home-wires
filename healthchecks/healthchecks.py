@@ -18,4 +18,4 @@ class Healthchecks:
         try:
             requests.get(url)
         except:
-            logger.warning('Could not execute healthcheck')
+            logger.warning('Could not execute healthcheck', exc_info=True)
