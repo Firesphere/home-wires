@@ -29,23 +29,26 @@ class EnvironmentDB:
                 password=os.getenv('MYSQL_PASS'),
                 database=os.getenv('MYSQL_DATA')
             )
+            self.cursor = self.connection.cursor(prepared=True)
         except Exception as e:
             logger.critical("Could not set up a database connection!\n{}".format(e), exc_info=True)
 
     def check_table(self):
-        self.connection.cursor().execute(
-            self.create.format(os.uname().nodename)
-        )
+        if self.connection:
+            self.cursor.execute(
+                self.create.format(os.uname().nodename)
+            )
         return self
 
     def insert(self, temp=100.0, humidity=65.0, ppm=0.0):
-        if temp < 50:
-            query = self.insert_query.format(os.uname().nodename)
-            cursor = self.connection.cursor(prepared=True)
-            cursor.execute(query, (temp, humidity, ppm))
+        if self.connection:
+            if temp < 50:
+                query = self.insert_query.format(os.uname().nodename)
+                self.cursor.execute(query, (temp, humidity, ppm))
         return self
 
     def close(self):
-        self.connection.commit()
-        self.connection.cursor().close()
-        self.connection.close()
+        if self.connection:
+            self.connection.commit()
+            self.cursor.close()
+            self.connection.close()

@@ -18,11 +18,7 @@ dotenv.load_dotenv(dotenv_path=env_path)
 openweathermap = "states/sensor.openweathermap_pressure"
 url = '{}{}'.format(os.getenv('HASSURL'), openweathermap)
 creds = auth.HTTPBearerAuth(os.getenv('HASS'))
-
-if os.getenv('HAS_LCD') == 'True':
-    display = LCDDisplay()
-else:
-    display = None
+lcd_enabled = os.getenv('HAS_LCD') == 'True'
 
 
 def set_weather(sensor):
@@ -61,21 +57,17 @@ def push_values(temp=18.0, humid=65.0, ppm=0.0):
     EnvironmentDB().insert(temp, humid, ppm).close()
 
 
-def do_sleep(state=1, temp=18.0, humid=65.0, ppm=0.0):
+def do_sleep(state=0, temp=18.0, humid=65.0, ppm=0.0):
     sleep_time = 15
-    if state >= 1:
+    if state == 0:
+        logger.info('Updated temperature values: {}C {}% {}ppm'.format(temp, humid, ppm))
+        state = 0.5
+    else:
         state = 1 if (state > 16) else state
         sleep_time = state
         logger.warning('Failed to update and push new temperature values, waiting {} seconds'.format(state))
-    else:
-        logger.info('Updated temperature values: {}C {}% {}ppm'.format(temp, humid, ppm))
-        state = 0.5
-
-    if display is not None:
-        if state >= 1:
-            display.countdown(state)
-        else:
-            display.show_values(temp, humid, ppm)
+    if lcd_enabled:
+        LCDDisplay(state, temp, humid, ppm)
     else:
         time.sleep(sleep_time)
 

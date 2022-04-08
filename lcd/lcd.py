@@ -17,7 +17,7 @@ waitmsg = "Please hold\nretrying in {}s"
 
 class LCDDisplay:
 
-    def __init__(self):
+    def __init__(self, state, temp=100, humid=100, ppm=0):
         lcd_rs = digitalio.DigitalInOut(board.D26)
         lcd_en = digitalio.DigitalInOut(board.D19)
         lcd_d7 = digitalio.DigitalInOut(board.D27)
@@ -43,6 +43,10 @@ class LCDDisplay:
             datetime.now().strftime("%H:%M:%S")
         )
         self.lcd = lcd
+        if state < 1:
+            self.show_values(temp, humid, ppm)
+        else:
+            self.countdown(state)
 
     def show_values(self, temp, humid, ppm=0):
         self.lcd.clear()
@@ -56,11 +60,12 @@ class LCDDisplay:
             self.lcd.message = messages['ppmmsg'].format(ppm)
             time.sleep(3)
         self.lcd.clear()
-        self.lcd.message = messages['vcgmsg'].format(vcgencmd.Vcgencmd().measure_temp())
+        cputemp = vcgencmd.Vcgencmd().measure_temp()
+        self.lcd.message = messages['vcgmsg'].format(cputemp)
         time.sleep(3)
-        tmp = time.time() + 5
         self.lcd.clear()
         self.lcd.message = datetime.now().strftime("%B %d, %Y")
+        tmp = time.time() + 5
         while tmp > time.time():
             self.lcd.message = "{}\n{}".format(
                 datetime.now().strftime("%B %d, %Y"),
@@ -68,8 +73,8 @@ class LCDDisplay:
             )
 
     def countdown(self, i):
+        self.lcd.clear()
         while i >= 0:
-            self.lcd.clear()
             self.lcd.message = waitmsg.format(i)
             i = i - 1
             time.sleep(1)
