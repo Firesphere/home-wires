@@ -1,12 +1,10 @@
 import logging
 import os
 import time
-
-import board
 import dotenv
-import requests
+import board
 
-import HTTPBearerAuth.requests as auth
+from homeassistant.homeassistant import HomeAssistant
 from db.db import EnvironmentDB
 from healthchecks.healthchecks import Healthchecks
 from lcd.lcd import LCDDisplay
@@ -15,25 +13,12 @@ from mqtt.mqtt import MQTT
 logger = logging.getLogger("Status logger")
 env_path = os.path.join(os.getcwd(), '.env')
 dotenv.load_dotenv(dotenv_path=env_path)
-openweathermap = "states/sensor.openweathermap_pressure"
-url = '{}{}'.format(os.getenv('HASSURL'), openweathermap)
-creds = auth.HTTPBearerAuth(os.getenv('HASS'))
 lcd_enabled = os.getenv('HAS_LCD') == 'True'
 
 
-def set_weather(sensor):
-    try:
-        weather = requests.get(url, auth=creds)
-        result = weather.json()
-        sensor.ambient_pressure = round(int(result['state']))
-    except:
-        # no-op
-        logger.info('Could not retrieve weather data from HASS')
-
-
 def pull_values(sensor, i):
-    try:
-        if sensor.data_available:
+    if sensor.data_available:
+        try:
             temperature = float(format(sensor.temperature, ".2f"))
             if hasattr(sensor, 'humidity'):
                 humidity = float(format(sensor.humidity, ".2f"))
@@ -45,11 +30,12 @@ def pull_values(sensor, i):
                 ppm = 0
             push_values(temperature, humidity, ppm)
             Healthchecks()
-            i = do_sleep(0, temperature, humidity, ppm)
-    except Exception as e:
-        logger.critical("Error encountered while checking values:\n{}".format(e), exc_info=True)
-        Healthchecks('fail')
-        return do_sleep(i)
+            return do_sleep(0, temperature, humidity, ppm)
+        except Exception as e:
+            logger.critical("Error encountered while checking values:\n{}".format(e), exc_info=True)
+            Healthchecks('fail', '{}'.format(e))
+            return do_sleep(i)
+    return i
 
 
 def push_values(temp=18.0, humid=65.0, ppm=0.0):
@@ -101,7 +87,9 @@ class TemperatureSCD:
 
         while True:
             Healthchecks('start')
-            set_weather(sensor)
+            pressure = HomeAssistant().pressure
+            if pressure > 0:
+                sensor.ambient_pressure = pressure
             i = pull_values(sensor, i)
 
 
