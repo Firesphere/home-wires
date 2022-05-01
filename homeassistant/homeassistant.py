@@ -9,8 +9,8 @@ logger = logging.getLogger("Status logger")
 env_path = os.path.join(os.getcwd(), '.env')
 dotenv.load_dotenv(dotenv_path=env_path)
 openweathermap = "states/sensor.openweathermap_pressure"
-url = '{}{}'.format(os.getenv('HASSURL'), openweathermap)
-creds = auth.HTTPBearerAuth(os.getenv('HASS'))
+url = '{}{}'.format(os.getenv('HASSURL', 'localhost'), openweathermap)
+creds = auth.HTTPBearerAuth(os.getenv('HASS_TOKEN', 'homeassistant'))
 
 
 class HomeAssistant:

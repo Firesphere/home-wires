@@ -5,7 +5,6 @@ import dotenv
 import board
 
 from homeassistant.homeassistant import HomeAssistant
-from db.db import EnvironmentDB
 from healthchecks.healthchecks import Healthchecks
 from lcd.lcd import LCDDisplay
 from mqtt.mqtt import MQTT
@@ -13,7 +12,7 @@ from mqtt.mqtt import MQTT
 logger = logging.getLogger("Status logger")
 env_path = os.path.join(os.getcwd(), '.env')
 dotenv.load_dotenv(dotenv_path=env_path)
-lcd_enabled = os.getenv('HAS_LCD') == 'True'
+lcd_enabled = os.getenv('HAS_LCD', False) == 'True'
 
 
 def pull_values(sensor, i):
@@ -40,7 +39,6 @@ def pull_values(sensor, i):
 
 def push_values(temp=18.0, humid=65.0, ppm=0.0):
     MQTT(temp, humid, ppm)
-    EnvironmentDB().insert(temp, humid, ppm).close()
 
 
 def do_sleep(state=0, temp=18.0, humid=65.0, ppm=0.0):

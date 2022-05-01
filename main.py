@@ -6,7 +6,6 @@ import os
 import dotenv
 
 import sensors
-from db.db import EnvironmentDB
 
 env_path = os.path.join(os.getcwd(), '.env')
 dotenv.load_dotenv(dotenv_path=env_path)
@@ -17,7 +16,6 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(messag
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.info("Start recording temperature/humidity")
-EnvironmentDB().check_table().close()
 
 
 def main():
