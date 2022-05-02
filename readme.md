@@ -19,6 +19,8 @@ in other repositories, is commonly a derived version of one of the videos in the
   - cvlc: Works, but at times eats up a lot of resources
 - Install XScreensaver and it's GL options
   - xscreensaver-gl
+- Download the videos, because over the net has proven to be near impossible to properly stream
+  - bash download-videos.sh
 
 - Copy or symlink `atv-aerial-xscreensaver.sh` into `/usr/lib/xscreensaver`
 - Edit `~/.xscreensaver` and add `GL:   "Apple TV Aerial"  atv-aerial-xscreensaver.sh  \n\` as the first line under `programs:`
