@@ -25,6 +25,7 @@ in other repositories, is commonly a derived version of one of the videos in the
 - Copy or symlink `atv-aerial-xscreensaver.sh` into `/usr/lib/xscreensaver`
 - Edit `~/.xscreensaver` and add `GL:   "Apple TV Aerial"  atv-aerial-xscreensaver.sh  \n\` as the first line under `programs:`
 - Configure XScreensaver to use Apple TV Aerial
+- Probably make the file executable with `chmod a+rx /usr/lib/xscreensaver/atv-aerial-xscreensaver.sh`
 
 ## 64bit OS (e.g. Raspberry Pi OS 64bit)
 

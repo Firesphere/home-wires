@@ -10,56 +10,86 @@ command -v mplayer >/dev/null 2>&1 || {
 # path of movies
 # movies=/opt/ATV4
 movies="$HOME/.local/apple-aerial"
-
-DayArray=(
+DayLosAngelesArray=(
     Los_Angeles/Day/comp_LA_A008_C004_ALTB_ED_FROM_FLAME_RETIME_v46_SDR_PS_20180917_SDR_2K_HEVC.mov
     Los_Angeles/Day/comp_LA_A006_C008_PSNK_ALL_LOGOS_v10_SDR_PS_FINAL_20180801_SDR_2K_HEVC.mov
     Los_Angeles/Day/comp_LA_A005_C009_PSNK_ALT_v09_SDR_PS_201809134_SDR_2K_HEVC.mov
+)
+DayHongKongArray=(
     Hong_Kong/Day/comp_HK_H004_C010_PSNK_v08_SDR_PS_20181009_SDR_2K_HEVC.mov
     Hong_Kong/Day/HK_H004_C013_2K_SDR_HEVC.mov
     Hong_Kong/Day/comp_HK_H004_C008_PSNK_v19_SDR_PS_20180914_SDR_2K_HEVC.mov
     Hong_Kong/Day/comp_HK_H004_C001_PSNK_DENOISE_v14_SDR_PS_FINAL_20180731_SDR_2K_HEVC.mov
+)
+DayLiwaArray=(
     Liwa/Day/comp_LW_L001_C003__PSNK_DENOISE_v04_SDR_PS_FINAL_20180803_SDR_2K_HEVC.mov
     Liwa/Day/comp_LW_L001_C006_PSNK_DENOISE_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
+)
+DayGreenlandArray=(
     Greenland/Day/comp_GL_G002_C002_PSNK_v03_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+DayHawaiiArray=(
     Hawaii/Clouds/comp_H004_C007_PS_v02_SDR_PS_20180925_SDR_2K_HEVC.mov
     Hawaii/Clouds/comp_H004_C009_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     Hawaii/Day/comp_H007_C003_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     Hawaii/Day/comp_H005_C012_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+DayLondonArray=(
     London/Day/comp_L010_C006_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     London/Day/comp_L007_C007_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+DayDubayArray=(
     Dubai/Day/comp_DB_D008_C010_PSNK_v21_SDR_PS_20180914_F0F16157_SDR_2K_HEVC.mov
     Dubai/Day/comp_DB_D002_C003_PSNK_v04_SDR_PS_20180914_SDR_2K_HEVC.mov
     Dubai/Day/comp_DB_D001_C001_PSNK_v06_SDR_PS_20180824_SDR_2K_HEVC.mov
     Dubai/Day/comp_DB_D001_C005_COMP_PSNK_v12_SDR_PS_20180912_SDR_2K_HEVC.mov
+)
+DayChinaArray=(
     China/Day/comp_C004_C003_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     China/Day/comp_C001_C005_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     China/Day/comp_CH_C002_C005_PSNK_v05_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     China/Day/comp_CH_C007_C004_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     China/Day/comp_CH_C007_C011_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     China/Day/comp_C003_C003_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+DayNewYorkArray=(
     New_York/Day/comp_N008_C009_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     New_York/Day/comp_N003_C006_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+DaySanFranciscoArray=(
     San_Francisco/Day/comp_A008_C007_011550_CC_v01_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     San_Francisco/Day/comp_A013_C012_0122D6_CC_v01_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     San_Francisco/Day/comp_A006_C003_1219EE_CC_v01_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
 )
-NightArray=(
+NightLosAngelesArray=(
     Los_Angeles/Night/comp_LA_A006_C004_v01_SDR_FINAL_PS_20180730_SDR_2K_HEVC.mov
     Los_Angeles/Night/comp_LA_A011_C003_DGRN_LNFIX_STAB_v57_SDR_PS_20181002_SDR_2K_HEVC.mov
     Los_Angeles/Night/comp_LA_A009_C009_PSNK_v02_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     Los_Angeles/Night/LA_A011_C003_2K_SDR_HEVC.mov
+)
+NightHongKongArray=(
     Hong_Kong/Night/comp_HK_B005_C011_PSNK_v16_SDR_PS_20180914_SDR_2K_HEVC.mov
-    Korean_and_Japan_Night/Space/comp_GMT026_363A_103NC_E1027_KOREA_JAPAN_NIGHT_v18_SDR_PS_20180907_SDR_2K_HEVC.mov
+)
+NightGreenlandArray=(
     Greenland/Night/comp_GL_G004_C010_PSNK_v04_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
     Greenland/Night/comp_GL_G010_C006_PSNK_NOSUN_v12_SDR_PS_FINAL_20180709_SDR_2K_HEVC.mov
+)
+NightHawaiiArray=(
     Hawaii/Night/comp_H012_C009_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+NightLondonArray=(
     London/Night/comp_L012_c002_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
     London/Night/comp_L004_C011_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+NightDubaiArray=(
     Dubai/Night/comp_DB_D011_C010_PSNK_DENOISE_v19_SDR_PS_20180914_SDR_2K_HEVC.mov
     Dubai/Night/DB_D011_C009_2K_SDR_HEVC.mov
+)
+NightNewYorkArray=(
     New_York/Night/comp_N013_C004_PS_v01_SDR_PS_20180925_F1970F7193_SDR_2K_HEVC.mov
     New_York/Night/comp_N008_C003_PS_v01_SDR_PS_20180925_SDR_2K_HEVC.mov
+)
+NightSanFranciscoArray=(
     San_Francisco/Night/comp_A007_C017_01156B_v02_SDR_PS_20180925_SDR_2K_HEVC.mov
     San_Francisco/Night/comp_1223LV_FLARE_v21_SDR_PS_FINAL_20180709_F0F5700_SDR_2K_HEVC.mov
     San_Francisco/Night/comp_A012_C014_1223PT_v53_SDR_PS_FINAL_20180709_F0F8700_SDR_2K_HEVC.mov
@@ -115,16 +145,54 @@ CoralsArray=(
     Underseas/Corals/PA_A004_C003_SDR_20190719_SDR_2K_HEVC.mov
     Underseas/Corals/RS_A008_C010_SDR_20191218_SDR_2K_HEVC.mov
 )
-UnderseasArray=${JellyfishArray[@]}+${UnderseasOtherArray[@]}+${PlantsArray}+${CoralsArray}
 
 # database files to allow for no repeats when playing videos
 day_db=$XDG_CONFIG_HOME/.atv4-day
 night_db=$XDG_CONFIG_HOME/.atv4-night
 
 # Pick the videos you want
-others=${UnderseasArray[@]}+${SpaceArray[@]}
-night=${NightArray[@]}+${others[@]}
-day=${DayArray[@]}+${others[@]}
+DayArray=(
+    "${DayLosAngelesArray[@]}"
+    "${DayHongKongArray[@]}"
+    "${DayLiwaArray[@]}"
+    "${DayGreenlandArray[@]}"
+    "${DayHawaiiArray[@]}"
+    "${DayLondonArray[@]}"
+    "${DayDubayArray[@]}"
+    "${DayChinaArray[@]}"
+    "${DayNewYorkArray[@]}"
+    "${DaySanFranciscoArray[@]}"
+)
+NightArray=(
+    "${NightLosAngelesArray[@]}"
+    "${NightHongKongArray[@]}"
+    "${NightGreenlandArray[@]}"
+    "${NightHawaiiArray[@]}"
+    "${NightLondonArray[@]}"
+    "${NightDubaiArray[@]}"
+    "${NightNewYorkArray[@]}"
+    "${NightSanFranciscoArray[@]}"
+)
+UnderseasArray=(
+    "${JellyfishArray[@]}"
+    "${FishAndMammalsArray[@]}"
+    "${UnderseasOtherArray[@]}"
+    "${PlantsArray[@]}"
+    "${CoralsArray[@]}"
+)
+
+others=(
+    "${UnderseasArray[@]}"
+    "${SpaceArray[@]}"
+)
+night=(
+    "${NightArray[@]}"
+    "${others[@]}"
+)
+day=(
+    "${DayArray[@]}"
+    "${others[@]}"
+)
 
 buildlist() {
     day_length=$(wc -l "$day_db" | awk '{ print $1 }')
@@ -160,13 +228,15 @@ selectVideo() {
     buildlist
     
     # Remove the selected video from the "database" files, so we won't repeat
-    $(sed -i "${pick}d" "$used")
+    $(sed -i "s|$selected|""|g" "$used") # Replace with empty string in the unused db
+    $(sed -i '/^$/d' "$used") # Then, remove all empty lines, to keep the line count correct
     # This will happily do nothing if it's not found, so... yay?
     $(sed -i "s|$selected|""|g" "$unused") # Replace with empty string in the unused db
     $(sed -i '/^$/d' "$unused") # Then, remove all empty lines, to keep the line count correct
 }
 
 # https://github.com/kevincox/xscreensaver-videos
+# Because we put everything in newlines in the buildlist, use newlines as the separator
 IFS=$'\n'
 trap : SIGTERM SIGINT SIGHUP
 while (true) #!(keystate lshift)
