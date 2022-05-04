@@ -30,3 +30,16 @@ in other repositories, is commonly a derived version of one of the videos in the
 ## 64bit OS (e.g. Raspberry Pi OS 64bit)
 
 It's pretty much the same, with the exception that the xscreensaver files live in `/usr/libexec/xscreensaver`
+
+# Text overlays
+
+If you like, you can add the name of the file (where available) to your playback, as a subtitle.
+
+For configuration of the subtitle placement and font-size, I suggest you read your player of choice's documentation.
+
+All titles are displayed for 5 minutes (I did not feel like figuring out how long each video was. So I capped it at 5m).
+
+Copy-and-merge the _contents_ (including folders and subfolders), of `overlay` into the same folder of
+where your videos are downloaded. So that each video has an `.srt` file next to the video.
+
+The video player should now automatically pick up the subtitle file, and show it for the duration (or the first 5 minutes) of the playback.
