@@ -8,7 +8,7 @@ Over Buckingham Palace in London
 
 3
 00:00:49,000 --> 00:01:43,999
-Over St James's Park heading toward the River Thames, London
+Over St James’s Park heading toward the River Thames, London
 
 4
 00:01:44,000 --> 00:02:28,999
@@ -27,6 +27,6 @@ Passing by The Shard in South London
 Crossing the River Thames in London
 
 8
-00:05:24,000 --> 00:06:-1,999
+00:05:24,000 --> 00:05:59,999
 Crossing the River Thames at Tower Bridge in London
 

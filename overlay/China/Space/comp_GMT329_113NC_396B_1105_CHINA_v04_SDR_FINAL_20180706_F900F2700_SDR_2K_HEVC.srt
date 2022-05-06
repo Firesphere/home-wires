@@ -15,6 +15,6 @@ Heading over eastern China approaching Shanghai
 Approaching Shanghai heading toward the East China Sea
 
 5
-00:00:50,000 --> 00:01:-1,999
+00:00:50,000 --> 00:00:59,999
 Over Shanghai moving toward the East China Sea
 

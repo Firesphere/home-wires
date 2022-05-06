@@ -3,7 +3,7 @@
 Heading southeast over the Great Plains of the United States
 
 2
-00:01:30,000 --> 00:02:-1,999
+00:01:30,000 --> 00:01:59,999
 Heading southeast over the Midwest United States
 
 3
@@ -11,7 +11,7 @@ Heading southeast over the Midwest United States
 Over the southeast United States heading toward Florida
 
 4
-00:03:40,000 --> 00:04:-1,999
+00:03:40,000 --> 00:03:59,999
 Over Florida traveling toward the Bahamas
 
 5
@@ -19,7 +19,7 @@ Over Florida traveling toward the Bahamas
 Moving southeast over the Bahamas
 
 6
-00:04:45,000 --> 00:05:-1,999
+00:04:45,000 --> 00:04:59,999
 Over the Bahamas approaching the Dominican Republic and Haiti
 
 7
@@ -27,6 +27,6 @@ Over the Bahamas approaching the Dominican Republic and Haiti
 Over the Dominican Republic and Haiti approaching the Caribbean Sea
 
 8
-00:05:15,000 --> 00:06:-1,999
+00:05:15,000 --> 00:05:59,999
 Over the Caribbean Sea heading south toward Venezuela
 

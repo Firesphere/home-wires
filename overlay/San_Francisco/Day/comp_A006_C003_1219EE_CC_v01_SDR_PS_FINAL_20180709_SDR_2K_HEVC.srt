@@ -7,6 +7,6 @@ San Francisco Bay and the Golden Gate Bridge
 Heading over the north tower of the Golden Gate Bridge toward San Francisco
 
 3
-00:03:11,000 --> 00:04:-1,999
+00:03:11,000 --> 00:03:59,999
 Over San Francisco Bay
 

@@ -9,7 +9,7 @@ Traveling east toward El Capitan in
 Yosemite National Park, United States
 
 3
-00:01:27,000 --> 00:02:-1,999
+00:01:27,000 --> 00:01:59,999
 Passing El Capitan, Yosemite National Park, United States
 
 4

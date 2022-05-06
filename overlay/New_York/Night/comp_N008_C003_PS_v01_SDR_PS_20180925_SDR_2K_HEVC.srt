@@ -3,7 +3,7 @@
 Approaching Lower Manhattan from New York Harbor
 
 2
-00:01:50,000 --> 00:03:-1,999
+00:01:50,000 --> 00:02:59,999
 Alongside Lower Manhattan approaching One World Trade Center
 
 3
@@ -11,6 +11,6 @@ Alongside Lower Manhattan approaching One World Trade Center
 Passing One World Trade Center toward Midtown Manhattan
 
 4
-00:03:30,000 --> 00:04:-1,999
+00:03:30,000 --> 00:03:59,999
 Over Lower Manhattan in New York moving toward Midtown
 

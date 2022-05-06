@@ -7,7 +7,7 @@ Traveling northeast over the Sahara at night
 Over the Grand Erg Oriental heading toward the Mediterranean Sea
 
 3
-00:01:40,000 --> 00:02:-1,999
+00:01:40,000 --> 00:01:59,999
 The Mediterranean coast of Tunisia and Libya
 
 4
@@ -19,7 +19,7 @@ Moving over the Mediterranean Sea toward Italy
 Over southern Italy approaching the Balkan Peninsula with Turkey in the distance
 
 6
-00:02:45,000 --> 00:03:-1,999
+00:02:45,000 --> 00:02:59,999
 Over the Balkan Peninsula moving toward the Black Sea
 
 7

@@ -54,6 +54,15 @@ def generate_captions(location, captions):
             start_time = convert(prev_time)
             end_time = convert(time)
             text = captions['timedCaptions'][str(prev_time)]
+            seconds = end_time[2]
+            # If the end-time is at 0 seconds, stuff breaks
+            minutes = end_time[1]
+            if seconds > 0:
+                seconds = seconds - 1
+            else:
+                minutes = minutes - 1
+                seconds = 59
+
             srt_string = "{}{}\n{}:{}:{},000 --> {}:{}:{},999\n{}\n\n".format(
                 srt_string,
                 i,
@@ -61,8 +70,8 @@ def generate_captions(location, captions):
                 str(start_time[1]).zfill(2),
                 str(start_time[2]).zfill(2),
                 str(end_time[0]).zfill(2),
-                str(end_time[1]).zfill(2),
-                str(end_time[2] - 1).zfill(2),
+                str(minutes).zfill(2),
+                str(seconds).zfill(2),
                 text
             )
             i = i + 1

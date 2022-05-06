@@ -3,7 +3,7 @@
 Heading down 7th Avenue toward Times Square, New York
 
 2
-00:00:40,000 --> 00:02:-1,999
+00:00:40,000 --> 00:01:59,999
 Over Times Square in New York
 
 3

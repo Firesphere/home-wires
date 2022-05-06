@@ -4,7 +4,7 @@ Over Yosemite National Park
 in the United States
 
 2
-00:00:40,000 --> 00:01:-1,999
+00:00:40,000 --> 00:00:59,999
 Traveling toward Half Dome in
 Yosemite National Park, United States
 
@@ -23,7 +23,7 @@ Nevada and Illilouette Falls in
 Yosemite National Park, United States
 
 6
-00:04:45,000 --> 00:05:-1,999
+00:04:45,000 --> 00:04:59,999
 Nevada, Vernal, and Illilouette Falls in
 Yosemite National Park, United States
 
