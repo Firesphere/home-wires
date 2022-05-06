@@ -13,7 +13,6 @@ day_db=$XDG_CONFIG_HOME/.atv4-day
 night_db=$XDG_CONFIG_HOME/.atv4-night
 
 # path of movies
-# movies=/opt/ATV4
 movies="$HOME/.local/apple-aerial"
 
 # Put all relevant files in a variable
