@@ -1,0 +1,4 @@
+Patagonia/Day/P005_C002_UHD_SDR_2K_HEVC.mov
+Patagonia/Day/P006_C002_UHD_SDR_2K_HEVC.mov
+Patagonia/Day/P007_C027_UHD_SDR_2K_HEVC.mov
+Patagonia/Day/P001_C005_UHD_SDR_2K_HEVC.mov

@@ -1,2 +1,24 @@
-00:00:00,00 --> 00:05:00,00
-California to Vegas
+1
+00:00:00,000 -- 00:01:09,999
+Over the Pacific Ocean moving toward the California coast
+2
+00:01:10,000 -- 00:01:24,999
+Over the California coast traveling inland
+3
+00:01:25,000 -- 00:01:34,999
+Passing over Los Angeles on the west coast of the United States
+4
+00:01:35,000 -- 00:01:49,999
+Over Los Angeles approaching Las Vegas in the United States
+5
+00:01:50,000 -- 00:02:-1,999
+Over Las Vegas heading toward Salt Lake City in the United States
+6
+00:02:00,000 -- 00:02:34,999
+Over the western United States approaching Salt Lake City
+7
+00:02:35,000 -- 00:02:49,999
+Passing between Salt Lake City and Denver in the United States
+8
+00:02:50,000 -- 00:03:09,999
+Over the Rocky Mountains in the United States

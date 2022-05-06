@@ -1,2 +1,3 @@
-00:00:00,00 --> 00:05:00,00
-Liwa Oasis 2
+1
+00:00:00,000 -- 00:03:-1,999
+Flying over Liwa Oasis in the United Arab Emirates

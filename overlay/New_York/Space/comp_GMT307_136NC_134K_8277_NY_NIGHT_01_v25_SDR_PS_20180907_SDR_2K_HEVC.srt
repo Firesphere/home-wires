@@ -1,2 +1,24 @@
-00:00:00,00 --> 00:05:00,00
-New York Night: Mexico City to New York
+1
+00:00:00,000 -- 00:01:44,999
+Over the Pacific Ocean heading toward Mexico
+2
+00:01:45,000 -- 00:02:01,999
+Passing over Mexico City toward the Gulf of Mexico
+3
+00:02:02,000 -- 00:03:-1,999
+Flying over the Gulf of Mexico toward the United States
+4
+00:03:00,000 -- 00:03:09,999
+Passing by Houston and approaching New Orleans in the United States
+5
+00:03:10,000 -- 00:03:34,999
+Heading over New Orleans and the Gulf Coast of the United States
+6
+00:03:35,000 -- 00:04:39,999
+Moving over the southeastern United States
+7
+00:04:40,000 -- 00:05:19,999
+Over the eastern United States traveling toward New York
+8
+00:05:20,000 -- 00:05:29,999
+Over the eastern United States approaching New York City

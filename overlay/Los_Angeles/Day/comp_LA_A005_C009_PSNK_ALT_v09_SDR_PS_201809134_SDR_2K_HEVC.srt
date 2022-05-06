@@ -1,2 +1,3 @@
-00:00:00,00 --> 00:05:00,00
-Los Angeles: Harbor Freeway
+1
+00:00:00,000 -- 00:03:29,999
+Following Interstate 110 north through Los Angeles

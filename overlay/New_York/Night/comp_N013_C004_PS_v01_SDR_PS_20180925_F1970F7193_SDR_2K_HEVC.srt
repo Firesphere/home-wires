@@ -1,2 +1,9 @@
-00:00:00,00 --> 00:05:00,00
-New York: Seventh Avenue
+1
+00:00:00,000 -- 00:00:39,999
+Heading down 7th Avenue toward Times Square, New York
+2
+00:00:40,000 -- 00:02:-1,999
+Over Times Square in New York
+3
+00:02:00,000 -- 00:02:53,999
+Heading down 7th Avenue in Midtown Manhattan, New York

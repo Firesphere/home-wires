@@ -1,0 +1,9 @@
+1
+00:00:00,000 -- 00:02:03,999
+Half Dome in Yosemite National Park, United States
+2
+00:02:04,000 -- 00:02:25,999
+Passing by Half Dome and approaching Nevada Fall in Yosemite National Park
+3
+00:02:26,000 -- 00:03:48,999
+Half Dome and Nevada Fall in Yosemite National Park, United States

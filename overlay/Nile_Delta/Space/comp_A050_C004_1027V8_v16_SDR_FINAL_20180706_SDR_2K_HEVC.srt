@@ -1,0 +1,27 @@
+1
+00:00:00,000 -- 00:00:19,999
+Traveling over Western Europe with Great Britain and Ireland in the distance
+2
+00:00:20,000 -- 00:00:49,999
+Heading southeast over the Alps and the Po River Valley
+3
+00:00:50,000 -- 00:01:39,999
+Moving down the Italian Peninsula and the Adriatic Sea
+4
+00:01:40,000 -- 00:02:39,999
+Greece flanked by the Ionian and Aegean Seas
+5
+00:02:40,000 -- 00:03:04,999
+Traveling southeast over the Mediterranean Sea
+6
+00:03:05,000 -- 00:03:24,999
+The Mediterranean Sea and the Nile River Delta
+7
+00:03:25,000 -- 00:03:39,999
+The Nile River flowing through the Sahara in Egypt
+8
+00:03:40,000 -- 00:04:-1,999
+The Eastern Desert flanked by the Nile River and the Gulf of Suez
+9
+00:04:00,000 -- 00:04:51,999
+Heading southeast over the Red Sea

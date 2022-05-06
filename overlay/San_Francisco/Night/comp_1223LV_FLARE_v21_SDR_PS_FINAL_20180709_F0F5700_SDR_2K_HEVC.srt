@@ -1,2 +1,9 @@
-00:00:00,00 --> 00:05:00,00
-San Francisco: Bay and Embarcadero
+1
+00:00:00,000 -- 00:01:29,999
+Over the San Francisco Bay moving toward the Embarcadero
+2
+00:01:30,000 -- 00:02:29,999
+Over the Embarcadero looking down Market Street in San Francisco
+3
+00:02:30,000 -- 00:03:09,999
+Following Market Street through downtown San Francisco

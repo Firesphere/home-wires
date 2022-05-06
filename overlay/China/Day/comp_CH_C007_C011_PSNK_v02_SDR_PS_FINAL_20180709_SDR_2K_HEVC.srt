@@ -1,2 +1,3 @@
-00:00:00,00 --> 00:05:00,00
-China: Wulingyuan National Park 1
+1
+00:00:00,000 -- 00:08:00,999
+Traveling through Wulingyuan National Park in China

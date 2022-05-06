@@ -1,2 +1,27 @@
-00:00:00,00 --> 00:05:00,00
-Caribbean
+1
+00:00:00,000 -- 00:00:34,999
+Traveling over the Pacific Ocean toward Central America
+2
+00:00:35,000 -- 00:00:49,999
+The Pacific coasts of Nicaragua, Costa Rica, and Panama
+3
+00:00:50,000 -- 00:01:04,999
+Passing over Central America with South America in the distance
+4
+00:01:05,000 -- 00:01:24,999
+The Mosquito Coast of Nicaragua
+5
+00:01:25,000 -- 00:01:49,999
+Over the Caribbean Sea traveling toward Cuba
+6
+00:01:50,000 -- 00:02:04,999
+Passing by a cloud-covered Jamaica in the Caribbean Sea
+7
+00:02:05,000 -- 00:02:49,999
+Crossing over Cuba looking toward Haiti and the Dominican Republic
+8
+00:02:50,000 -- 00:03:09,999
+Traveling over the Bahamas looking toward Haiti and the Dominican Republic
+9
+00:03:10,000 -- 00:03:25,999
+Turks and Caicos Islands in the Atlantic Ocean

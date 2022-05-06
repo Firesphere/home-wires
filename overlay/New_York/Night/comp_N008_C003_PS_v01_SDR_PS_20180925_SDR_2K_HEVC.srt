@@ -1,2 +1,12 @@
-00:00:00,00 --> 00:05:00,00
-New York: Lower Manhattan
+1
+00:00:00,000 -- 00:01:49,999
+Approaching Lower Manhattan from New York Harbor
+2
+00:01:50,000 -- 00:03:-1,999
+Alongside Lower Manhattan approaching One World Trade Center
+3
+00:03:00,000 -- 00:03:29,999
+Passing One World Trade Center toward Midtown Manhattan
+4
+00:03:30,000 -- 00:04:-1,999
+Over Lower Manhattan in New York moving toward Midtown

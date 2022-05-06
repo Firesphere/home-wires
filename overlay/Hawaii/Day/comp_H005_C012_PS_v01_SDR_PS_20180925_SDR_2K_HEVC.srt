@@ -1,2 +1,3 @@
-00:00:00,00 --> 00:05:00,00
-Hawaii: Waimanu Valley
+1
+00:00:00,000 -- 00:05:35,999
+The Waimanu Valley in the Kohala Forest Reserve on the island of Hawai‘i

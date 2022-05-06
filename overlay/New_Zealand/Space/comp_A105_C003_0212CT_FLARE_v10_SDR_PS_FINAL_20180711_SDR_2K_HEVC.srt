@@ -1,2 +1,12 @@
-00:00:00,00 --> 00:05:00,00
-New Zealand
+1
+00:00:00,000 -- 00:01:09,999
+Crossing from night to day over the South Pacific Ocean
+2
+00:01:10,000 -- 00:01:49,999
+Crossing from night to day over New Zealand
+3
+00:01:50,000 -- 00:02:49,999
+Approaching sunrise over New Zealand
+4
+00:02:50,000 -- 00:03:29,999
+Leaving New Zealand heading northeast over the Pacific Ocean

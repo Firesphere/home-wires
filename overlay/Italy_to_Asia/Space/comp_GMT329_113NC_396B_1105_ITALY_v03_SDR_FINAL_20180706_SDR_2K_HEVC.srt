@@ -1,2 +1,21 @@
-00:00:00,00 --> 00:05:00,00
-Italy to Asia
+1
+00:00:00,000 -- 00:00:04,999
+Over Tunisia heading toward Italy
+2
+00:00:05,000 -- 00:00:14,999
+Over the Mediterranean Sea looking toward Sicily and the Italian Peninsula
+3
+00:00:15,000 -- 00:00:24,999
+Over southern Italy with the Balkan Peninsula beyond
+4
+00:00:25,000 -- 00:00:39,999
+Over the Balkan Peninsula moving toward central Asia
+5
+00:00:40,000 -- 00:00:54,999
+Over the Balkan Peninsula passing by the Black Sea
+6
+00:00:55,000 -- 00:01:14,999
+Over Ukraine with Russia beyond
+7
+00:01:15,000 -- 00:02:12,999
+Over southwest Russia passing by Kazakhstan

@@ -1,0 +1,42 @@
+1
+00:00:00,000 -- 00:00:44,999
+Traveling northeast over the Ethiopian Highlands
+2
+00:00:45,000 -- 00:01:39,999
+Traveling over the Red Sea into the Arabian Peninsula
+3
+00:01:40,000 -- 00:02:09,999
+Heading northeast over the Arabian Peninsula
+4
+00:02:10,000 -- 00:02:44,999
+Over the Arabian Peninsula moving toward Iran
+5
+00:02:45,000 -- 00:03:09,999
+Over the Arabian Peninsula approaching Iran
+6
+00:03:10,000 -- 00:03:29,999
+Approaching the coast of Iran with the Zagros Mountains beyond
+7
+00:03:30,000 -- 00:04:-1,999
+Over the Zagros Mountains in Iran
+8
+00:04:00,000 -- 00:04:24,999
+Over the Dasht-e Lut desert in Iran
+9
+00:04:25,000 -- 00:05:04,999
+Moving toward Turkmenistan and the Garagum desert
+10
+00:05:05,000 -- 00:05:21,999
+The Amu Darya River and the Pamir-Alay Mountains in central Asia
+11
+00:05:22,000 -- 00:06:-1,999
+The Pamir-Alay Mountains and the Fergana Valley in central Asia
+12
+00:06:00,000 -- 00:06:39,999
+Heading into southeastern Kazakhstan from Kyrgyzstan
+13
+00:06:40,000 -- 00:07:29,999
+Traveling north over Kazakhstan
+14
+00:07:30,000 -- 00:08:00,999
+Over the Altai Mountains moving into Mongolia

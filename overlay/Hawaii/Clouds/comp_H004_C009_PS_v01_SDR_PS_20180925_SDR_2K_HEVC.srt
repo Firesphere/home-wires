@@ -1,2 +1,3 @@
-00:00:00,00 --> 00:05:00,00
-Hawaii: Pu‘u O ‘Umi
+1
+00:00:00,000 -- 00:04:-1,999
+Above the Pu‘u O ‘Umi Natural Area Reserve, on the island of Hawai‘i

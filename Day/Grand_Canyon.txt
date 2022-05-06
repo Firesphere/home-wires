@@ -1,0 +1,4 @@
+Grand_Canyon/Day/G010_C026_UHD_SDR_v02_2K_HEVC.mov
+Grand_Canyon/Day/G007_C004_UHD_SDR_2K_HEVC.mov
+Grand_Canyon/Day/G008_C015_UHD_SDR_2K_HEVC.mov
+Grand_Canyon/Day/G009_C014_UHD_SDR_2K_HEVC.mov

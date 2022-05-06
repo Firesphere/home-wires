@@ -1,2 +1,9 @@
-00:00:00,00 --> 00:05:00,00
-Los Angeles: Santa Monica Beach
+1
+00:00:00,000 -- 00:06:04,999
+Over Santa Monica State Beach near Los Angeles
+2
+00:06:05,000 -- 00:07:09,999
+Passing over Santa Monica Pier near Los Angeles
+3
+00:07:10,000 -- 00:13:26,999
+Over Santa Monica State Beach near Los Angeles

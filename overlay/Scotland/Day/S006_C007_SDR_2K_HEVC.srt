@@ -1,0 +1,13 @@
+1
+00:00:00,000 -- 00:02:18,999
+Loch Moidart on the west coast of Scotland
+2
+00:02:19,000 -- 00:03:00,999
+Approaching Castle Tioram on the
+west coast of Scotland
+3
+00:03:01,000 -- 00:03:33,999
+Castle Tioram on the west coast of Scotland
+4
+00:03:34,000 -- 00:04:20,999
+Traveling over the west coast of Scotland

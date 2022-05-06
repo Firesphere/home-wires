@@ -43,3 +43,19 @@ Copy-and-merge the _contents_ (including folders and subfolders), of `overlay` i
 where your videos are downloaded. So that each video has an `.srt` file next to the video.
 
 The video player should now automatically pick up the subtitle file, and show it for the duration (or the first 5 minutes) of the playback.
+
+# Low-resolution files for Raspberry Pi 7" playback
+
+I'll see if I can/will/shall upload my resized videos to 800*450, some time, some where.
+
+
+# Pick videos
+
+You can pick videos by theme, by importing specifically those, e.g.:
+```commandline
+
+DayChinaArray=$(cat "$movies/Day/China.txt")
+
+```
+
+Will give you all the Day videos of China, assuming there are, of course.

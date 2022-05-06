@@ -1,0 +1,7 @@
+Yosemite/Day/Y011_C001_SDR_2K_HEVC.mov
+Yosemite/Day/Y003_C009_SDR_2K_HEVC.mov
+Yosemite/Day/Y009_C015_SDR_2K_HEVC.mov
+Yosemite/Day/Y011_C008_SDR_2K_HEVC.mov
+Yosemite/Day/Y005_C003_SDR_2K_HEVC.mov
+Yosemite/Day/Y004_C015_SDR_2K_HEVC.mov
+Yosemite/Day/Y002_C013_SDR_2K_HEVC.mov

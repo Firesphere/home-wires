@@ -1,2 +1,9 @@
-00:00:00,00 --> 00:05:00,00
-Hong Kong: Victoria Peak
+1
+00:00:00,000 -- 00:02:29,999
+Flying over Victoria Peak in Hong Kong
+2
+00:02:30,000 -- 00:05:29,999
+Flying over Hong Kong toward Victoria Harbour
+3
+00:05:30,000 -- 00:07:-1,999
+Over Victoria Harbour approaching the Kowloon Peninsula

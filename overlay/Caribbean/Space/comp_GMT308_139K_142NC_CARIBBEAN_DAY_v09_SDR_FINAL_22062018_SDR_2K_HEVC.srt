@@ -1,2 +1,24 @@
-00:00:00,00 --> 00:05:00,00
-Caribbean Day
+1
+00:00:00,000 -- 00:01:29,999
+Heading southeast over the Great Plains of the United States
+2
+00:01:30,000 -- 00:02:-1,999
+Heading southeast over the Midwest United States
+3
+00:02:00,000 -- 00:03:39,999
+Over the southeast United States heading toward Florida
+4
+00:03:40,000 -- 00:04:-1,999
+Over Florida traveling toward the Bahamas
+5
+00:04:00,000 -- 00:04:44,999
+Moving southeast over the Bahamas
+6
+00:04:45,000 -- 00:05:-1,999
+Over the Bahamas approaching the Dominican Republic and Haiti
+7
+00:05:00,000 -- 00:05:14,999
+Over the Dominican Republic and Haiti approaching the Caribbean Sea
+8
+00:05:15,000 -- 00:06:-1,999
+Over the Caribbean Sea heading south toward Venezuela

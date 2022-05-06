@@ -1,2 +1,27 @@
-00:00:00,00 --> 00:05:00,00
-Korean and Japan Night: Korea and Japan Night
+1
+00:00:00,000 -- 00:00:21,999
+Moving southeast over Siberia and Mongolia
+2
+00:00:22,000 -- 00:00:31,999
+Heading toward Inner Mongolia
+3
+00:00:32,000 -- 00:01:-1,999
+Over Mongolia traveling toward China
+4
+00:01:00,000 -- 00:01:49,999
+Over northern China moving toward the Korean Peninsula
+5
+00:01:50,000 -- 00:02:29,999
+Over China heading toward the Korean Peninsula
+6
+00:02:30,000 -- 00:03:-1,999
+The Korean Peninsula with Japan in the distance
+7
+00:03:00,000 -- 00:03:14,999
+Over South Korea traveling toward Japan
+8
+00:03:15,000 -- 00:04:19,999
+Over Japan looking toward the Pacific Ocean
+9
+00:04:20,000 -- 00:04:42,999
+Over the Pacific Ocean southeast of Japan
