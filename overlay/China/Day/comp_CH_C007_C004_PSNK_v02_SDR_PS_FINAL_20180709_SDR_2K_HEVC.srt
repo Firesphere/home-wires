@@ -1,3 +1,3 @@
 1
-00:00:00,000 -- 00:08:-1,999
-Exploring Wulingyuan National Park in China
+00:00:00,000 --> 00:08:-1,999
+Exploring Wulingyuan National Park in China

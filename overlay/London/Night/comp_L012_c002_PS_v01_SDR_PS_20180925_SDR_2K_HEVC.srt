@@ -1,18 +1,18 @@
 1
-00:00:00,000 -- 00:00:19,999
-Approaching Tower Bridge on the River Thames, London
+00:00:00,000 --> 00:00:19,999
+Approaching Tower Bridge on the River Thames, London
 2
-00:00:20,000 -- 00:01:-1,999
-Crossing the River Thames in London
+00:00:20,000 --> 00:01:-1,999
+Crossing the River Thames in London
 3
-00:01:00,000 -- 00:01:31,999
-Passing The Shard in South London
+00:01:00,000 --> 00:01:31,999
+Passing The Shard in South London
 4
-00:01:32,000 -- 00:03:19,999
-South of the River Thames heading toward the London Eye
+00:01:32,000 --> 00:03:19,999
+South of the River Thames heading toward the London Eye
 5
-00:03:20,000 -- 00:04:29,999
-Crossing the River Thames toward Westminster, London
+00:03:20,000 --> 00:04:29,999
+Crossing the River Thames toward Westminster, London
 6
-00:04:30,000 -- 00:04:47,999
+00:04:30,000 --> 00:04:47,999
 Over Westminster, London

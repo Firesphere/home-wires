@@ -1,6 +1,6 @@
 1
-00:00:00,000 -- 00:03:29,999
-Approaching Downtown Dubai in the United Arab Emirates
+00:00:00,000 --> 00:03:29,999
+Approaching Downtown Dubai in the United Arab Emirates
 2
-00:03:30,000 -- 00:06:-1,999
-Heading over Downtown Dubai in the United Arab Emirates
+00:03:30,000 --> 00:06:-1,999
+Heading over Downtown Dubai in the United Arab Emirates

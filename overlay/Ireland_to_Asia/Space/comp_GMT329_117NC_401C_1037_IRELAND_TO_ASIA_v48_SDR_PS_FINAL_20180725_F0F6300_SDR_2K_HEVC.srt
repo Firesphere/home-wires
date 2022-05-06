@@ -1,27 +1,27 @@
 1
-00:00:00,000 -- 00:00:14,999
-Over the North Atlantic approaching Ireland and Great Britain
+00:00:00,000 --> 00:00:14,999
+Over the North Atlantic approaching Ireland and Great Britain
 2
-00:00:15,000 -- 00:00:44,999
-Ireland and Great Britain
+00:00:15,000 --> 00:00:44,999
+Ireland and Great Britain
 3
-00:00:45,000 -- 00:01:04,999
-Over Great Britain traveling toward mainland Europe
+00:00:45,000 --> 00:01:04,999
+Over Great Britain traveling toward mainland Europe
 4
-00:01:05,000 -- 00:01:44,999
+00:01:05,000 --> 00:01:44,999
 Over northwestern Europe heading toward Russia
 5
-00:01:45,000 -- 00:02:29,999
+00:01:45,000 --> 00:02:29,999
 Over central Europe heading toward Russia
 6
-00:02:30,000 -- 00:02:44,999
+00:02:30,000 --> 00:02:44,999
 Over eastern Europe with Moscow in the distance
 7
-00:02:45,000 -- 00:03:04,999
+00:02:45,000 --> 00:03:04,999
 Over eastern Europe looking toward Moscow
 8
-00:03:05,000 -- 00:03:14,999
+00:03:05,000 --> 00:03:14,999
 Over western Russia passing Moscow
 9
-00:03:15,000 -- 00:03:29,999
+00:03:15,000 --> 00:03:29,999
 Over Russia traveling toward central Asia

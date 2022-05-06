@@ -1,9 +1,9 @@
 1
-00:00:00,000 -- 00:00:14,999
+00:00:00,000 --> 00:00:14,999
 The reflection of the sun along the coast of Iran
 2
-00:00:15,000 -- 00:01:-1,999
+00:00:15,000 --> 00:01:-1,999
 Moving from day to night over Iran
 3
-00:01:00,000 -- 00:01:27,999
+00:01:00,000 --> 00:01:27,999
 Moving from day to night over central Asia

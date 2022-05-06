@@ -1,9 +1,9 @@
 1
-00:00:00,000 -- 00:02:19,999
-San Francisco Bay and the Golden Gate Bridge
+00:00:00,000 --> 00:02:19,999
+San Francisco Bay and the Golden Gate Bridge
 2
-00:02:20,000 -- 00:03:10,999
-Heading over the north tower of the Golden Gate Bridge toward San Francisco
+00:02:20,000 --> 00:03:10,999
+Heading over the north tower of the Golden Gate Bridge toward San Francisco
 3
-00:03:11,000 -- 00:04:-1,999
+00:03:11,000 --> 00:04:-1,999
 Over San Francisco Bay

@@ -1,3 +1,3 @@
 1
-00:00:00,000 -- 00:07:49,999
-Following the Colorado River through the Grand Canyon in the United States
+00:00:00,000 --> 00:07:49,999
+Following the Colorado River through the Grand Canyon in the United States

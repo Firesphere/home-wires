@@ -1,12 +1,12 @@
 1
-00:00:00,000 -- 00:01:54,999
-Over the North Atlantic Ocean heading toward Portugal
+00:00:00,000 --> 00:01:54,999
+Over the North Atlantic Ocean heading toward Portugal
 2
-00:01:55,000 -- 00:02:29,999
+00:01:55,000 --> 00:02:29,999
 Over Portugal and Spain
 3
-00:02:30,000 -- 00:03:-1,999
-Moving away from the Iberian Peninsula and passing over the Bay of Biscay and France
+00:02:30,000 --> 00:03:-1,999
+Moving away from the Iberian Peninsula and passing over the Bay of Biscay and France
 4
-00:03:00,000 -- 00:03:36,999
-Over Western Europe with the North Atlantic Ocean in the distance
+00:03:00,000 --> 00:03:36,999
+Over Western Europe with the North Atlantic Ocean in the distance

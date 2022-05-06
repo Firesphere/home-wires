@@ -1,3 +1,3 @@
 1
-00:00:00,000 -- 00:04:47,999
-Traveling along the Nuussuaq Peninsula in Greenland
+00:00:00,000 --> 00:04:47,999
+Traveling along the Nuussuaq Peninsula in Greenland

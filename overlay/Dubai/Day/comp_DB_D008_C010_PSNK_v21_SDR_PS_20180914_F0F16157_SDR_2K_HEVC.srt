@@ -1,3 +1,3 @@
 1
-00:00:00,000 -- 00:08:58,999
-Traveling along Sheikh Zayed Road in Dubai, United Arab Emirates
+00:00:00,000 --> 00:08:58,999
+Traveling along Sheikh Zayed Road in Dubai, United Arab Emirates

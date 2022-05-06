@@ -1,25 +1,25 @@
 1
-00:00:00,000 -- 00:00:43,999
-Traveling toward Bridalveil Fall and
-El Capitan in Yosemite National Park
+00:00:00,000 --> 00:00:43,999
+Traveling toward Bridalveil Fall and
+El Capitan in Yosemite National Park
 2
-00:00:44,000 -- 00:01:26,999
+00:00:44,000 --> 00:01:26,999
 Traveling east toward El Capitan in
-Yosemite National Park, United States
+Yosemite National Park, United States
 3
-00:01:27,000 -- 00:02:-1,999
-Passing El Capitan, Yosemite National Park, United States
+00:01:27,000 --> 00:02:-1,999
+Passing El Capitan, Yosemite National Park, United States
 4
-00:02:00,000 -- 00:06:29,999
-Traveling east toward Half Dome in
-Yosemite National Park, United States
+00:02:00,000 --> 00:06:29,999
+Traveling east toward Half Dome in
+Yosemite National Park, United States
 5
-00:06:30,000 -- 00:07:49,999
-Half Dome in Yosemite National Park, United States
+00:06:30,000 --> 00:07:49,999
+Half Dome in Yosemite National Park, United States
 6
-00:07:50,000 -- 00:09:44,999
-Traveling past Half Dome in
-Yosemite Valley, United States
+00:07:50,000 --> 00:09:44,999
+Traveling past Half Dome in
+Yosemite Valley, United States
 7
-00:09:45,000 -- 00:10:40,999
-Traveling east over Yosemite Valley, United States
+00:09:45,000 --> 00:10:40,999
+Traveling east over Yosemite Valley, United States
