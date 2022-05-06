@@ -1,27 +1,36 @@
 1
 00:00:00,000 --> 00:00:44,999
 Over the Horn of Africa traveling toward the Gulf of Aden
+
 2
 00:00:45,000 --> 00:01:54,999
 The southeastern Arabian Peninsula
+
 3
 00:01:55,000 --> 00:02:24,999
 The Gulf of Oman approaching the Makran Coast
+
 4
 00:02:25,000 --> 00:02:39,999
 The Makran Coast of Iran and Pakistan
+
 5
 00:02:40,000 --> 00:03:-1,999
 Over Iran moving toward Afghanistan and Pakistan
+
 6
 00:03:00,000 --> 00:03:54,999
 Over Afghanistan and Pakistan moving toward the Karakoram Range
+
 7
 00:03:55,000 --> 00:04:39,999
 Over the Karakoram Range traveling into China
+
 8
 00:04:40,000 --> 00:05:14,999
 The Takla Makan Desert in western China
+
 9
 00:05:15,000 --> 00:05:29,999
 The Tian Shan mountains in Central Asia
+

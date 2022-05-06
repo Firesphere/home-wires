@@ -23,7 +23,7 @@ def find(name):
 
 def download(url, name, video):
     name = name.replace(' ', '_')
-    vidpath = '../{}'.format(name)
+    vidpath = '../Videos/{}'.format(name)
     os.makedirs(vidpath, exist_ok=True)
     target = '{}/{}'.format(vidpath, video)
     with requests.get(url, verify=False, stream=True) as downloaded:
@@ -54,7 +54,7 @@ def generate_captions(location, captions):
             start_time = convert(prev_time)
             end_time = convert(time)
             text = captions['timedCaptions'][str(prev_time)]
-            srt_string = "{}{}\n{}:{}:{},000 -- {}:{}:{},999\n{}\n".format(
+            srt_string = "{}{}\n{}:{}:{},000 --> {}:{}:{},999\n{}\n\n".format(
                 srt_string,
                 i,
                 str(start_time[0]).zfill(2),
@@ -68,9 +68,9 @@ def generate_captions(location, captions):
             i = i + 1
         if captions['timedCaptions'][str(time)] == '':
             fullpath = location.split('/')
-            folder = location.replace(fullpath[-1], '').replace('../', '')
+            folder = location.replace(fullpath[-1], '').replace('../Videos/', '')
             os.makedirs(folder, exist_ok=True)
-            srt_location = location.replace('../', '').replace('mov', 'srt')
+            srt_location = location.replace('../Videos/', '').replace('mov', 'srt')
             open(srt_location, 'w').write(srt_string)
             break
 

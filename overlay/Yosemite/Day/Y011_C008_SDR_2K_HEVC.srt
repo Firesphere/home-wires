@@ -2,19 +2,24 @@
 00:00:00,000 --> 00:01:14,999
 Traveling toward Matthes Crest in
 Yosemite National Park, United States
+
 2
 00:01:15,000 --> 00:02:03,999
 Flying over Matthes Crest in
 Yosemite National Park, United States
+
 3
 00:02:04,000 --> 00:03:34,999
 Flying through Matthes Crest in
 Yosemite National Park, United States
+
 4
 00:03:35,000 --> 00:06:35,999
 Flying over Matthes Crest in
 Yosemite National Park, United States
+
 5
 00:06:36,000 --> 00:08:43,999
 Moving toward Tuolumne Meadows in
 Yosemite National Park, United States
+

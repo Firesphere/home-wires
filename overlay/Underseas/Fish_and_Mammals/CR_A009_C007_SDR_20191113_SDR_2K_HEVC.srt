@@ -2,3 +2,4 @@
 00:00:00,000 --> 00:03:-1,999
 Spinner Dolphins in the waters off
 of Costa Rica
+

@@ -1,27 +1,36 @@
 1
 00:00:00,000 --> 00:01:09,999
 Traveling northeast over the Sahara at night
+
 2
 00:01:10,000 --> 00:01:39,999
 Over the Grand Erg Oriental heading toward the Mediterranean Sea
+
 3
 00:01:40,000 --> 00:02:-1,999
 The Mediterranean coast of Tunisia and Libya
+
 4
 00:02:00,000 --> 00:02:19,999
 Moving over the Mediterranean Sea toward Italy
+
 5
 00:02:20,000 --> 00:02:44,999
 Over southern Italy approaching the Balkan Peninsula with Turkey in the distance
+
 6
 00:02:45,000 --> 00:03:-1,999
 Over the Balkan Peninsula moving toward the Black Sea
+
 7
 00:03:00,000 --> 00:03:29,999
 Over the Balkan Peninsula approaching the Black Sea
+
 8
 00:03:30,000 --> 00:03:49,999
 Traveling over the Black Sea toward Ukraine
+
 9
 00:03:50,000 --> 00:04:09,999
 Traveling over Ukraine toward Russia
+

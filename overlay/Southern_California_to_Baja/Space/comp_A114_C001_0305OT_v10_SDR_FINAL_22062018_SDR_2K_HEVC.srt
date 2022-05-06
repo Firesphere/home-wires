@@ -1,30 +1,40 @@
 1
 00:00:00,000 --> 00:00:19,999
 Over the Pacific Ocean heading toward the United States
+
 2
 00:00:20,000 --> 00:00:49,999
 Traveling south down the coast of California
+
 3
 00:00:50,000 --> 00:01:04,999
 Over southern California moving toward Mexico
+
 4
 00:01:05,000 --> 00:01:34,999
 Approaching the Mojave Desert in southern California with Mexico beyond
+
 5
 00:01:35,000 --> 00:02:09,999
 The Gulf of California flanked by the Sonoran Desert and the Baja California Peninsula
+
 6
 00:02:10,000 --> 00:03:04,999
 The Sierra Madre Occidental mountains on the west coast of Mexico
+
 7
 00:03:05,000 --> 00:03:44,999
 Over the Sierra Madre Occidental mountains moving toward the west coast of Mexico
+
 8
 00:03:45,000 --> 00:04:39,999
 Looking south to the Pacific Ocean over the Sierra Madre del Sur in Mexico
+
 9
 00:04:40,000 --> 00:04:49,999
 The Pacific Ocean off the coast of Mexico
+
 10
 00:04:50,000 --> 00:05:-1,999
 The Pacific Ocean off the coast of Mexico and Guatemala
+

@@ -1,6 +1,8 @@
 1
 00:00:00,000 --> 00:04:05,999
 Over Central Park traveling toward Midtown Manhattan in New York
+
 2
 00:04:06,000 --> 00:08:00,999
 Over Midtown Manhattan in New York
+

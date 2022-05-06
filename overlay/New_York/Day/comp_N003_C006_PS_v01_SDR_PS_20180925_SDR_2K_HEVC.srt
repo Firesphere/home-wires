@@ -1,12 +1,16 @@
 1
 00:00:00,000 --> 00:00:49,999
 Over the Upper East Side and Central Park in New York
+
 2
 00:00:50,000 --> 00:02:39,999
 Over Midtown Manhattan heading downtown toward the Empire State Building
+
 3
 00:02:40,000 --> 00:03:24,999
 Approaching the Empire State Building in New York
+
 4
 00:03:25,000 --> 00:04:-1,999
 Passing the Empire State Building moving toward Lower Manhattan
+

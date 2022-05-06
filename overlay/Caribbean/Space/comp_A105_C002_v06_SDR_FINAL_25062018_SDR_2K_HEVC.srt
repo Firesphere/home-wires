@@ -1,12 +1,16 @@
 1
 00:00:00,000 --> 00:01:09,999
 Over the Pacific Ocean moving toward Central America
+
 2
 00:01:10,000 --> 00:01:39,999
 The southwest coast of Central America heading toward the Caribbean Sea
+
 3
 00:01:40,000 --> 00:02:29,999
 Crossing Central America toward the Caribbean Sea
+
 4
 00:02:30,000 --> 00:03:29,999
 Over the Caribbean Sea moving toward Cuba
+

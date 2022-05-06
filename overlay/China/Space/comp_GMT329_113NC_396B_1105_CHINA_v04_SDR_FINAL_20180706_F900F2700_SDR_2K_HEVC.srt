@@ -1,15 +1,20 @@
 1
 00:00:00,000 --> 00:00:09,999
 Over central Asia traveling toward coastal China
+
 2
 00:00:10,000 --> 00:00:29,999
 Over central China traveling toward Shanghai
+
 3
 00:00:30,000 --> 00:00:44,999
 Heading over eastern China approaching Shanghai
+
 4
 00:00:45,000 --> 00:00:49,999
 Approaching Shanghai heading toward the East China Sea
+
 5
 00:00:50,000 --> 00:01:-1,999
 Over Shanghai moving toward the East China Sea
+

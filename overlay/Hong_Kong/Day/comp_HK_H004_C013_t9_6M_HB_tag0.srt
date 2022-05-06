@@ -1,9 +1,12 @@
 1
 00:00:00,000 --> 00:02:29,999
 Over Wan Chai approaching Central Hong Kong
+
 2
 00:02:30,000 --> 00:04:29,999
 Over Central Hong Kong
+
 3
 00:04:30,000 --> 00:11:-1,999
 Over Hong Kong Island
+
