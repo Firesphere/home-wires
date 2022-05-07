@@ -14,8 +14,8 @@ night_db=$XDG_CONFIG_HOME/.atv4-night
 
 # path of movies
 movies="$HOME/.local/apple-aerial"
-
 # Put all relevant files in a variable
+# Note that Day and Night are combinations of _all_ locations
 Night="$movies/Night/videos.txt"
 Day="$movies/Day/videos.txt"
 Space="$movies/Space/videos.txt"
@@ -27,28 +27,45 @@ Other="$movies/Other/videos.txt"
 Plants="$movies/Plants/videos.txt"
 Corals="$movies/Corals/videos.txt"
 
+# Here you can select what's in your day or night set.
+day_files=(
+    $Day
+    $Space
+    $Clouds
+    $Jellyfish
+    $Fish_and_Mammals
+    $Other
+    $Plants
+    $Corals
+)
+
+night_files=(
+    $Night
+    $Space
+    $Jellyfish
+    $Fish_and_Mammals
+    $Other
+    $Plants
+    $Corals
+)
+
 buildlist() {
     # If the list db file is empty, add the videos again
     day_length=$(wc -l "$day_db" | awk '{ print $1 }')
     if [[ $day_length -lt 2 ]]; then
-        cat "$Day" | sed 's/ /\n/g' > $day_db
-        cat "$Clouds" | sed 's/ /\n/g' >> $day_db
-        cat "$Space" | sed 's/ /\n/g' >> $day_db
-        cat "$Jellyfish" | sed 's/ /\n/g' >> $day_db
-        cat "$Fish_and_Mammals" | sed 's/ /\n/g' >> $day_db
-        cat "$Other" | sed 's/ /\n/g' >> $day_db
-        cat "$Plants" | sed 's/ /\n/g' >> $day_db
-        cat "$Corals" | sed 's/ /\n/g' >> $day_db
+        echo "" > $day_db ## Now, it's REALLY empty
+        for video_file in ${day_files[@]};
+        do
+            cat "$video_file" | sed 's/ /\n/g' >> $day_db
+        done
     fi
     night_length=$(wc -l "$night_db" | awk '{ print $1 }')
     if [[ $night_length -lt 2 ]]; then
-        cat "$Night" | sed 's/ /\n/g' > $night_db
-        cat "$Space" | sed 's/ /\n/g' >> $night_db
-        cat "$Jellyfish" | sed 's/ /\n/g' >> $night_db
-        cat "$Fish_and_Mammals" | sed 's/ /\n/g' >> $night_db
-        cat "$Other" | sed 's/ /\n/g' >> $night_db
-        cat "$Plants" | sed 's/ /\n/g' >> $night_db
-        cat "$Corals" | sed 's/ /\n/g' >> $night_db
+        echo "" > $night_db # Make sure it's really empty
+        for video_file in ${night_files[@]};
+        do
+            cat "$video_file" | sed 's/ /\n/g' >> $night_db
+        done
     fi
 }
 
@@ -87,19 +104,19 @@ selectVideo() {
 # Ensure the lists contain at least 1 line
 buildlist
 # Because we put everything in newlines in the buildlist, use newlines as the separator
-IFS=$'\n'
-# https://github.com/kevincox/xscreensaver-videos
-trap : SIGTERM SIGINT SIGHUP
-while (true) #!(keystate lshift)
-do
-  selectVideo
-  # Default, use mplayer
-  /usr/bin/mplayer -nosound -really-quiet -nolirc -nostop-xscreensaver -wid "$XSCREENSAVER_WINDOW" -fs "$movies/$selected" &
-  # Option 2, use MPV
-  #/usr/bin/mpv --really-quiet --no-audio --fs --no-stop-screensaver --wid="$XSCREENSAVER_WINDOW" --panscan=1.0 "$movies/$useit" &
-  # Option 3, use VLC
-  #cvlc --play-and-exit --fullscreen --no-audio --no-osd --drawable-xid "$XSCREENSAVER_WINDOW" "$video" &
-  pid=$!
-  wait $pid
-  [ $? -gt 128 ] && { kill $pid ; exit 128; } ;
-done
+# IFS=$'\n'
+# # https://github.com/kevincox/xscreensaver-videos
+# trap : SIGTERM SIGINT SIGHUP
+# while (true) #!(keystate lshift)
+# do
+#   selectVideo
+#   # Default, use mplayer
+#   /usr/bin/mplayer -nosound -really-quiet -nolirc -nostop-xscreensaver -wid "$XSCREENSAVER_WINDOW" -fs "$movies/$selected" &
+#   # Option 2, use MPV
+#   #/usr/bin/mpv --really-quiet --no-audio --fs --no-stop-screensaver --wid="$XSCREENSAVER_WINDOW" --panscan=1.0 "$movies/$useit" &
+#   # Option 3, use VLC
+#   #cvlc --play-and-exit --fullscreen --no-audio --no-osd --drawable-xid "$XSCREENSAVER_WINDOW" "$video" &
+#   pid=$!
+#   wait $pid
+#   [ $? -gt 128 ] && { kill $pid ; exit 128; } ;
+# done
