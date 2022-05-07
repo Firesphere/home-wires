@@ -2,7 +2,7 @@
 # Fix wonky text to subtitle SRT displayable text.
 # Except the wonky nbsp character. That one needs fixing every time.
 
-srts=$(find . -name "*.srt")
+srts=$(find . -name "apple-tv-screensavers.json")
 
 for srt in $srts
 do
