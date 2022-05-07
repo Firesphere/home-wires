@@ -37,7 +37,7 @@ If you like, you can add the name of the file (where available) to your playback
 
 For configuration of the subtitle placement and font-size, I suggest you read your player of choice's documentation.
 
-All titles are displayed for 5 minutes (I did not feel like figuring out how long each video was. So I capped it at 5m).
+All descriptions are shown for the duration of the file, where possible.
 
 Copy-and-merge the _contents_ (including folders and subfolders), of `overlay` into the same folder of
 where your videos are downloaded. So that each video has an `.srt` file next to the video.
@@ -51,11 +51,34 @@ I'll see if I can/will/shall upload my resized videos to 800*450, some time, som
 
 # Pick videos
 
-You can pick videos by theme, by importing specifically those, e.g.:
-```commandline
-
-DayChinaArray=$(cat "$movies/Day/China.txt")
-
+You can pick videos by theme, by importing specifically those, instead of the full set of `Day` or `Night`
+All Day, Night, Space etc. are organised in to flat-file text, so to change the Day list from "all" to "Only Hawaii",
+change `Day="$movies/Day/videos.txt"` to e.g. `Hawaii="$movies/Day/Hawaii.txt` and change
+```
+day_files=(
+  $Day
+  $Clouds
+  etc.
+)
+```
+to
+```
+day_files=(
+  $Hawaii
+  $Clouds
+  etc.
+)
 ```
 
-Will give you all the Day videos of China, assuming there are, of course.
+If you don't want to split over day and night, put all possibilities in both lists, and it'll work itself out.
+
+# Many thanks
+
+- Apple for making this screensaver idea
+- kevincox for the xscreensaver capture
+- graysky2 for the original screensaver on which I improved a bit (I think)
+- bzamayo for the JSON with the subtitles in readable English
+
+# License
+
+[WTFPL](http://www.wtfpl.net/)
