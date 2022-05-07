@@ -104,19 +104,19 @@ selectVideo() {
 # Ensure the lists contain at least 1 line
 buildlist
 # Because we put everything in newlines in the buildlist, use newlines as the separator
-# IFS=$'\n'
-# # https://github.com/kevincox/xscreensaver-videos
-# trap : SIGTERM SIGINT SIGHUP
-# while (true) #!(keystate lshift)
-# do
-#   selectVideo
-#   # Default, use mplayer
-#   /usr/bin/mplayer -nosound -really-quiet -nolirc -nostop-xscreensaver -wid "$XSCREENSAVER_WINDOW" -fs "$movies/$selected" &
-#   # Option 2, use MPV
-#   #/usr/bin/mpv --really-quiet --no-audio --fs --no-stop-screensaver --wid="$XSCREENSAVER_WINDOW" --panscan=1.0 "$movies/$useit" &
-#   # Option 3, use VLC
-#   #cvlc --play-and-exit --fullscreen --no-audio --no-osd --drawable-xid "$XSCREENSAVER_WINDOW" "$video" &
-#   pid=$!
-#   wait $pid
-#   [ $? -gt 128 ] && { kill $pid ; exit 128; } ;
-# done
+IFS=$'\n'
+# https://github.com/kevincox/xscreensaver-videos
+trap : SIGTERM SIGINT SIGHUP
+while (true) #!(keystate lshift)
+do
+  selectVideo
+  # Default, use mplayer
+  /usr/bin/mplayer -nosound -really-quiet -nolirc -nostop-xscreensaver -wid "$XSCREENSAVER_WINDOW" -fs "$movies/$selected" &
+  # Option 2, use MPV
+  #/usr/bin/mpv --really-quiet --no-audio --fs --no-stop-screensaver --wid="$XSCREENSAVER_WINDOW" --panscan=1.0 "$movies/$useit" &
+  # Option 3, use VLC
+  #cvlc --play-and-exit --fullscreen --no-audio --no-osd --drawable-xid "$XSCREENSAVER_WINDOW" "$video" &
+  pid=$!
+  wait $pid
+  [ $? -gt 128 ] && { kill $pid ; exit 128; } ;
+done
