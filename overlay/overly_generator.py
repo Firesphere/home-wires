@@ -4,6 +4,7 @@ import subprocess
 
 import requests
 
+# This file just generates all the SRT files, regardless.
 
 def convert(seconds):
     hours = seconds // 3600

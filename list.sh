@@ -1,4 +1,5 @@
 #!/bin/bash
+# Put all videos listed out in a txt file as a sort-of database
 
 folders=$(find . -type d)
 

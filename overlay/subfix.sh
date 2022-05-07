@@ -1,4 +1,6 @@
 #!/bin/bash
+# Fix wonky text to subtitle SRT displayable text.
+# Except the wonky nbsp character. That one needs fixing every time.
 
 srts=$(find . -name "*.srt")
 

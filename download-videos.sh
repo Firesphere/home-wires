@@ -1,4 +1,5 @@
 #!/bin/bash
+# Download all videos I know of
 
 BASEURL="http://sylvan.apple.com/Aerials/2x/Videos/"
 BASEDIR="$HOME/.local/apple-aerial"
