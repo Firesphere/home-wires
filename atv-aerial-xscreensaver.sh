@@ -16,40 +16,42 @@ night_db=$XDG_CONFIG_HOME/.atv4-night
 movies="$HOME/.local/apple-aerial"
 
 # Put all relevant files in a variable
-NightArray=$(cat "$movies/Night/videos.txt")
-DayArray=$(cat "$movies/Day/videos.txt")
-SpaceArray=$(cat "$movies/Space/videos.txt")
+Night="$movies/Night/videos.txt"
+Day="$movies/Day/videos.txt"
+Space="$movies/Space/videos.txt"
+Clouds="$movies/Clouds/videos.txt"
 # The following are all under the sea
-JellyfishArray=$(cat "$movies/Jellyfish/videos.txt")
-Fish_and_MammalsArray=$(cat "$movies/Fish_and_Mammals/videos.txt")
-OtherArray=$(cat "$movies/Other/videos.txt")
-PlantsArray=$(cat "$movies/Plants/videos.txt")
-CoralsArray=$(cat "$movies/Corals/videos.txt")
+Jellyfish="$movies/Jellyfish/videos.txt"
+Fish_and_Mammals="$movies/Fish_and_Mammals/videos.txt"
+Other="$movies/Other/videos.txt"
+Plants="$movies/Plants/videos.txt"
+Corals="$movies/Corals/videos.txt"
 
 buildlist() {
+    # If the list db file is empty, add the videos again
     day_length=$(wc -l "$day_db" | awk '{ print $1 }')
     if [[ $day_length -lt 2 ]]; then
-        echo "${DayArray[@]}" | sed 's/ /\n/g' > $day_db
-        echo "${SpaceArray[@]}" | sed 's/ /\n/g' >> $day_db
-        echo "${JellyfishArray[@]}" | sed 's/ /\n/g' >> $day_db
-        echo "${Fish_and_MammalsArray[@]}" | sed 's/ /\n/g' >> $day_db
-        echo "${OtherArray[@]}" | sed 's/ /\n/g' >> $day_db
-        echo "${PlantsArray[@]}" | sed 's/ /\n/g' >> $day_db
-        echo "${CoralsArray[@]}" | sed 's/ /\n/g' >> $day_db
+        cat "$Day" | sed 's/ /\n/g' > $day_db
+        cat "$Clouds" | sed 's/ /\n/g' >> $day_db
+        cat "$Space" | sed 's/ /\n/g' >> $day_db
+        cat "$Jellyfish" | sed 's/ /\n/g' >> $day_db
+        cat "$Fish_and_Mammals" | sed 's/ /\n/g' >> $day_db
+        cat "$Other" | sed 's/ /\n/g' >> $day_db
+        cat "$Plants" | sed 's/ /\n/g' >> $day_db
+        cat "$Corals" | sed 's/ /\n/g' >> $day_db
     fi
     night_length=$(wc -l "$night_db" | awk '{ print $1 }')
     if [[ $night_length -lt 2 ]]; then
-        echo "${NightArray[@]}" | sed 's/ /\n/g' > $night_db
-        echo "${SpaceArray[@]}" | sed 's/ /\n/g' >> $night_db
-        echo "${JellyfishArray[@]}" | sed 's/ /\n/g' >> $night_db
-        echo "${Fish_and_MammalsArray[@]}" | sed 's/ /\n/g' >> $night_db
-        echo "${OtherArray[@]}" | sed 's/ /\n/g' >> $night_db
-        echo "${PlantsArray[@]}" | sed 's/ /\n/g' >> $night_db
-        echo "${CoralsArray[@]}" | sed 's/ /\n/g' >> $night_db
+        cat "$Night" | sed 's/ /\n/g' > $night_db
+        cat "$Space" | sed 's/ /\n/g' >> $night_db
+        cat "$Jellyfish" | sed 's/ /\n/g' >> $night_db
+        cat "$Fish_and_Mammals" | sed 's/ /\n/g' >> $night_db
+        cat "$Other" | sed 's/ /\n/g' >> $night_db
+        cat "$Plants" | sed 's/ /\n/g' >> $night_db
+        cat "$Corals" | sed 's/ /\n/g' >> $night_db
     fi
 }
 
-buildlist
 
 selectVideo() {
     hour=$(date +%H)
@@ -82,6 +84,8 @@ selectVideo() {
     $(sed -i '/^$/d' "$unused") # Then, remove all empty lines, to keep the line count correct
 }
 
+# Ensure the lists contain at least 1 line
+buildlist
 # Because we put everything in newlines in the buildlist, use newlines as the separator
 IFS=$'\n'
 # https://github.com/kevincox/xscreensaver-videos
