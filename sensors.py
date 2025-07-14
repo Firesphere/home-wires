@@ -80,7 +80,7 @@ class TemperatureSCD:
         import adafruit_scd30
 
         sensor = adafruit_scd30.SCD30(board.I2C())
-        sensor.altitude = 255
+        sensor.altitude = 239
         i = 1
 
         while True:
