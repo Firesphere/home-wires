@@ -4,7 +4,7 @@ from datetime import datetime
 import adafruit_character_lcd.character_lcd as characterlcd
 import board
 import digitalio
-import vcgencmd
+# import vcgencmd
 
 messages = {
     "tempmsg": "Temperature:\n{}\337C",

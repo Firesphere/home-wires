@@ -103,3 +103,4 @@ class TemperatureAHT:
         while True:
             Healthchecks('start')
             i = pull_values(sensor, i)
+
