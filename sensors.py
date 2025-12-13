@@ -98,9 +98,8 @@ class TemperatureAHT:
     def __init__(self):
         # A little work-around for Shortcake
         import adafruit_ahtx0
-        from adafruit_extended_bus import ExtendedI2C as I2C
 
-        sensor = adafruit_ahtx0.AHTx0(I2C(3))
+        sensor = adafruit_ahtx0.AHTx0(board.I2C())
         sensor.__setattr__('data_available', True)
         i = 1
 
