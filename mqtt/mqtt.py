@@ -10,7 +10,7 @@ dotenv.load_dotenv(dotenv_path=env_path)
 class MQTT:
 
     def __init__(self, temp=100.0, humid=65.0, ppm=0.0):
-        if 60 > float(temp) > 0:  # 60/10 is a reasonable upper treshold
+        if 60 > float(temp) > 0:  # 60/0 is a reasonable upper treshold
             auth = {
                 "username": os.getenv("MQTT_USER", ''),
                 "password": os.getenv("MQTT_PASS", '')

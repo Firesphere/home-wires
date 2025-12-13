@@ -27,6 +27,7 @@ def pull_values(sensor, i):
                 ppm = float(format(sensor.CO2, ".2f"))
             else:
                 ppm = 0
+            print(temperature)
             push_values(temperature, humidity, ppm)
             Healthchecks()
             return do_sleep(0, temperature, humidity, ppm)
@@ -80,23 +81,26 @@ class TemperatureSCD:
         import adafruit_scd30
 
         sensor = adafruit_scd30.SCD30(board.I2C())
-        sensor.altitude = 239
+        sensor.altitude = 215
         i = 1
-
+        sensor.self_calibration_enabled = True
         while True:
             Healthchecks('start')
             pressure = HomeAssistant().pressure
             if pressure > 0:
                 sensor.ambient_pressure = pressure
+            sensor.altitude = 250
             i = pull_values(sensor, i)
 
 
 class TemperatureAHT:
 
     def __init__(self):
+        # A little work-around for Shortcake
         import adafruit_ahtx0
+        from adafruit_extended_bus import ExtendedI2C as I2C
 
-        sensor = adafruit_ahtx0.AHTx0(board.I2C())
+        sensor = adafruit_ahtx0.AHTx0(I2C(3))
         sensor.__setattr__('data_available', True)
         i = 1
 
