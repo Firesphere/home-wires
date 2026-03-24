@@ -1,5 +1,6 @@
 adafruit-circuitpython-dht
 adafruit-circuitpython-scd30
+adafruit-circuitpython-scd4x
 adafruit-circuitpython-charlcd
 adafruit-circuitpython-ahtx0
 adafruit-blinka

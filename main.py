@@ -26,6 +26,8 @@ def main():
         sensors.TemperatureAHT()
     elif sensortype == 'SCD30':
         sensors.TemperatureSCD()
+    elif sensortype == 'SCD4x':
+        sensors.TemperatureSCD4()
     else:
         logger.critical("Sensor not recognised. Exiting")
         exit(255)
