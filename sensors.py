@@ -101,13 +101,15 @@ class TemperatureSCD4:
         sensor = adafruit_scd4x.SCD4X(board.I2C())
         sensor.altitude = 239
         i = 1
+        sensor.self_calibration_enabled = True
         sensor.start_periodic_measurement()
         while True:
-            sensor.data_available = sensor.data_ready
             Healthchecks('start')
             pressure = HomeAssistant().pressure
             if pressure > 0:
                 sensor.ambient_pressure = pressure
+            sensor.altitude = 250
+            sensor.data_available = sensor.data_ready
             i = pull_values(sensor, i)
 
 
